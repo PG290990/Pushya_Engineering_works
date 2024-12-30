@@ -132,13 +132,7 @@ nav .fa{
     width:90%;
     transform:translate(-50%,-55%);
     }
-        .text-box p{
-            font-size: 10px;
-            position:relative;
-    top:45px;
-    left:50%;
-    transform:translate(-50%,-50%);
-        }
+
     .nav-links ul li{
         display:block;
     }
