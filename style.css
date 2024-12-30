@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: url('images/Banner_5.png');
+    background-position: center;
+    background-size: cover;
+    background-position: relative; 
+    
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav img {
+    width:100px;
+    
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    
+}
+
+.nav-links ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+
+.nav-links ul li a{
+    color:#25274D;
+    text-decoration:none;
+    font-size:13px;
+        
+}
+
+.nav-links ul li::after{
+    content:"";
+    width:0%;
+    height:2px;
+    background:#f44336;
+    display:block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+
+.text-box{
+    width:90%;
+    color:#25274D;
+    position:absolute;
+    top:82%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    
+}
+
+.text-box h1 {
+    font-size:50px;
+    position:absolute;
+    top:0%;
+    left:50%;
+    width:90%;
+    transform:translate(-50%,-50%);
+    border-bottom:0%
+    
+    
+}
+.text-box p{
+    margin:0Px 0Px 10Px;
+    position:relative;
+    top:40px;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 20Px;
+    color: #25274D;   
+        
+}
+
+
+.hero-btn{
+    display:inline-block;
+    text-decoration: none;
+    color:#25274D;
+    border:1px solid #25274D;
+    padding: 10px 20px;
+    font-size: 13px;
+    background:transparent;
+    margin: 10px 10px 10px 10px;
+    position:relative;
+    top:15px;
+    
+    cursor:pointer;
+    
+    
+}
+.hero-btn:hover{
+    border:1Px Solid #f44336;
+    background:#f44336;
+    transition: 1s;
+    
+}
+
+nav .fa{
+    display:none;
+}
+
+@media(max-width:700Px){
+    .text-box h1{
+        font-size: 20Px;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links {
+        position:absolute;
+        background:#f44336;
+        height:100vh;
+        width:200Px;
+        top:0;
+        right:-200Px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        
+        
+    }
+    nav .fa{
+        display:block;
+        color:#fff;
+        margin:10;
+        font-size:22Px;
+        cursor:pointer;
+        
+    }
+    .nav-links ul{
+        padding:30Px;
+        
+    }
+}
+/*-------------solution ---------*/
+
+.Solution{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 50px;
+    
+}
+Solution-col img{
+    width:80%;
+    display:block;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
+p{
+    color:#777;
+    font-size: 14Px;
+    font-weight:300;
+    line-height: 22Px;
+    padding: 10Px;
+    
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center ;
+    
+}
+
+.Solution-col{
+    flex-basis: 20%;
+    background: #F4F2E8;
+    border-radius: 10Px;
+    margin-bottom: 5%;
+    margin-left:1%;
+    margin-right: 1%;
+    justify-content: center;
+    align-items: center;
+    padding: 20Px 12Px;
+    box-sizing: border-box;
+    transition:0.5s;
+    
+}
+
+h3{
+    text-align:center;
+    font-weight: 600;
+    margin: 10Px 0;
+    
+}
+.Solution-col p{
+    text-align:justify;
+    position:relative;
+    min-height:inherit;
+    font-size: 12Px;
+    font-weight: 400;
+}
+
+.Solution-col:hover{
+    box-shadow: 0 0 20Px 0 rgba(0,0,0,0.2);
+}
+
+
+@media(max-width:700Px){
+    .row{
+        flex-direction: column;
+        
+    }
+}
+
+
+/*-------Customer-------*/
+
+.customer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column; /* Stack the header and images vertically */
+    align-items:center; /* Center-align the items */
+    justify-content: center; /* Center everything in the container */
+    min-height: 70vh; /* Make sure the container takes up the full viewport height */
+    box-sizing: border-box; /* Ensure padding doesn't add extra height */
+}
+
+.customer h1 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Add spacing below the header */
+}
+
+/* Image container styles */
+.customer-col {
+    flex-basis: 20%;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    margin-right:1%;
+    position: relative;
+    overflow: hidden;
+}
+
+.customer-col img {    
+    width: 100%; /* Default full width of the container */
+    display: inline-block;
+    border-radius: 10px; /* Match container's border radius */
+}
+
+/* Overlay layer styles */
+.layers {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layers:hover {
+    background: rgba(37, 29, 77,0.7);
+}
+
+/* Hover text styling */
+.layers h3 {
+    width: 100%;
+    font-weight: 1000;
+    color: #fff;
+    font-size: 15px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layers:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+.faciltites {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 0Px;
+    
+}
+
+.facilites-col{
+    flex-basis: 31%;
+    border-radius: 10Px;
+    margin-bottom: 5%;
+    margin-left:1%;
+    margin-right: 1%;
+    text-align: Left;
+}
+
+.facilites-col img{
+    width:100%;
+    border-radius:10Px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.facilites-col p{
+    padding: 0;
+    
+}
+
+.facilites-col h3{
+    margin-top:16px;
+    margin-bottom:15Px;
+    text-align:center;
+}
+
+.testimonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+.testimonials-col {
+    position:relative;
+    width: 100%;
+    border-radius: 10Px;
+    margin-bottom: 5%;
+    margin-left:1%;
+    margin-right:1%;
+    text-align: Left;
+    background:#F4F2E8;
+    padding:25px;
+    cursor:pointer;
+    display:block;
+    
+}
+
+
+
+
+.testimonials-col p{
+    padding:0;
+    
+}
+.testimonials-col h3{
+    margin-top:15Px;
+    text-align:left;
+    
+}
+
+
+.testimonials-col .fa{
+    color:#f44336;
+}
+
+@media (max-width:700Px){
+    .testimonials-col img{
+   
+    margin-left: 0Px;
+    margin-right:15Px;
+   
+}
+}
+/*-------call to action-----*/
+.CTA {
+    margin: 100px auto;
+    width: 60%;
+    background-color: #25274D;
+    background-position: left;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 10px; /* Reduced padding for better spacing */
+}
+
+.CTA h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.CTA p {
+    color: #fff;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 10%;
+    padding: 0;
+}
+
+.hero-btn2{
+    display:inline-block;
+    text-decoration: none;
+    color:#fff;
+    border:1px solid #fff;
+    padding: 10px 20px;
+    font-size: 13px;
+    background:transparent;
+    margin: 5px 10px 10px 10px;
+    position:relative;
+    cursor:pointer;
+    
+    
+}
+.hero-btn2:hover{
+    border:1Px Solid #f44336;
+    background:#f44336;
+    transition: 1s;
+    
+}
+.CTA input,
+.CTA textarea {
+    display: block; /* Stack inputs and textarea vertically */
+    margin: 0 auto 20px auto; /* Center align and add spacing */
+    background-color: aliceblue;
+    width: 80%; /* Adjust width */
+    font-size: 18px; /* Slightly smaller font for better layout */
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.CTA textarea {
+    resize: none; /* Disable resize for better control of layout */
+}
+
+@media(max-width:700Px){
+    .CTA h1{
+        font-size:24Px;
+    }
+}
+
+/*-------footer------*/
+
+.footer {
+    width: 100%;
+    text-align:center;
+    padding: 30Px 0;
+}
+
+.footer h4{
+    margin-bottom: 25Px;
+    margin-top: 20Px;
+    font-weight: 600;    
+}
+
+.footer p{
+    margin: 10px 0px 20px;
+    font-size: 14px;
+    color: #777;
+}
+.icons .fa{
+    color: #f44336;
+    margin:0 13Px;
+    cursor: pointer;
+    padding: 18Px 0;    
+}
+.fa-heart-o{
+    color:#f44336;
+    
+}
