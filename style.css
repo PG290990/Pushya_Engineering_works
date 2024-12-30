@@ -362,7 +362,7 @@ h3{
     padding:25px;
     cursor:pointer;
     display:block;
-    
+    box-sizing: border-box;
 }
 
 
