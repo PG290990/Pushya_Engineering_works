@@ -5,8 +5,8 @@
 }
 .Maps iframe {
     text-align: center;
-    padding: 50Px;
-    margin:10Px 0Px 10Px;
+    padding: 50px;
+    margin:10px 0px 10px;
     width:80%;
          
     
@@ -16,7 +16,7 @@
       text-align: left;
    margin:0;
     width:80%;
-    padding:0Px;
+    padding:0px;
     
     
         
@@ -32,15 +32,69 @@ nav {
 
 nav img{
   
-    width:100Px;
+    width:100px;
     float: right;
     
 } 
 
 .Email-btn {
-    color:blue;
+    color: blue;
     font-display: fallback;
-    position:absolute;
-    top:0px;
-    left:50%;
+    font-size: 20px;
+    width: 10%;
+    position: absolute; /* Change to relative for better flow */
+    top: 10px; /* Adjust spacing */
+    left: 50%; 
+    transform: translate(-50%);
+    margin: 10px auto; /* Center within its container */
+    text-align: center;
+    padding:8px;
+    border: 2px solid blue;
+    cursor:pointer;
+}
+
+.Email-btn:hover{
+    border:1px Solid #f44336;
+    background:#f44336;
+    transition: 1s;
+    
+}
+
+@media (max-width: 700px) {
+    .Email-btn {
+        position: static; /* Remove absolute positioning for small screens */
+        margin-top: 50px;
+        margin-left: 10px;
+        width: 100%; /* Allow full width on small screens */
+        text-align: center; /* Center the text */
+        font-size: 10px;
+        
+    }
+    
+    nav img {
+        width: 80px; /* Adjust size for mobile */
+        float: none; /* Remove float for better alignment */
+        margin: 0 auto; /* Center the image */
+        display: block; /* Ensure proper display */
+    }
+
+    .Maps h1 {
+        text-align: left; /* Center-align on small screens */
+        margin: 5px 0px 0px 10px; /* Adjust margins */
+        width: 90%; /* Use more width on smaller screens */
+        padding: 0px; /* Add some padding */
+        font-size: 20px;
+
+    }
+    
+    .Maps p {
+        position:relative;
+        top: 5%;
+        text-align: left; /* Center-align on small screens */
+        margin: 0px 10px 10px 10px  ; /* Adjust margins */
+        width: 50%; /* Use more width on smaller screens */
+        padding: 0px; /* Add some padding */
+        font-size: 10px;
+        
+    }
 }
