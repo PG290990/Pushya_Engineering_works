@@ -127,6 +127,9 @@ nav .fa{
     .text-box h1{
         font-size: 20Px;
     }
+     .text-box p{
+        font-size: 10Px;
+    }
     .nav-links ul li{
         display:block;
     }
