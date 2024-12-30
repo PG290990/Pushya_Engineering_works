@@ -76,10 +76,10 @@ nav img {
 .text-box h1 {
     font-size:50px;
     position:absolute;
-    top:0%;
+    top:10%;
     left:50%;
     width:90%;
-    transform:translate(-50%,-52%);
+    transform:translate(-50%,-55%);
     border-bottom:0%
     
     
