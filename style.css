@@ -125,13 +125,17 @@ nav .fa{
 
 @media(max-width:700px){
     .text-box h1{
-        font-size: 20px;
+        font-size: 18px;
         position:absolute;
     top:10%;
     left:50%;
     width:90%;
     transform:translate(-50%,-55%);
     }
+     .text-box p{
+   font-size: 15Px;  
+        
+}
 
     .nav-links ul li{
         display:block;
