@@ -17,10 +17,10 @@ Body {
     display: block;
     top:0%;
     width:80%;
-    padding: 0Px;
+    padding: 0px;
     left: 50%;
     transform: translate(-50%);
-    margin:10Px 10Px 10Px 10px;
+    margin:10px 10px 10px 10px;
   
     
 }
@@ -102,19 +102,35 @@ nav img{
 
 @media (max-width: 700px) {
     .Email-btn {
-        position: absolute; /* Remove absolute positioning for small screens */
-        top:0px;
-        margin-top: 10px;
-        margin-right: 10px;
-        display:block;
-        
-        align-content: center;
-        width: 15%; /* Allow full width on small screens */
-        text-align: center; /* Center the text */
-        font-size: 10px;
+        text-decoration: none;
+    color:#25274D;
+    border:1px solid #25274D;
+    padding: 10px 20px;
+    font-size: 10px;
+    background:transparent;
+    margin: 10px 10px 10px 10px;
+    position:absolute;
+    bottom: 5px; /* Adjust spacing */
+    left: 50%; 
+    transform: translate(-50%);
+    
+    cursor:pointer;
         
     }
     
+    .Maps iframe {
+    position: absolute;
+    display: block;
+    top:20%;
+    width:80%;
+    height:50%;
+    padding: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    margin:10px 10px 10px 10px;
+  
+    
+}
     nav img {
         width: 80px; /* Adjust size for mobile */
         float: left; /* Remove float for better alignment */
@@ -123,22 +139,36 @@ nav img{
     }
 
     .Maps h1 {
-        text-align: left; /* Center-align on small screens */
-        margin: 5px 0px 0px 10px; /* Adjust margins */
-        width: 90%; /* Use more width on smaller screens */
-        padding: 0px; /* Add some padding */
-        font-size: 20px;
+        display: block;
+    position: absolute;
+    left:78%;
+    transform:translate(-50%);
+    color: #25274D;
+    top:5px;
+    font-size: 15px;   
+    
+    
+    text-align: center;
+    
+    margin:3px;
+    width:80%;
+    padding:0Px;
 
     }
     
     .Maps p {
-        position:relative;
-        top: 5%;
-        text-align: left; /* Center-align on small screens */
-        margin: 0px 10px 10px 10px  ; /* Adjust margins */
-        width: 50%; /* Use more width on smaller screens */
-        padding: 0px; /* Add some padding */
-        font-size: 10px;
+        display: block;
+    color: #25274D;
+    text-align: left;
+    position: absolute;
+    font-size: 10px;
+    left:80%;
+    transform:translate(-50%);
+    color: #25274D;
+    top:25px;
+    margin:3px;
+    width:35%;
+    padding:0Px;
         
     }
 }
