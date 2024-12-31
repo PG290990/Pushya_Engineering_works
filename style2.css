@@ -3,8 +3,19 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+Body {
+    min-height: 100vh;
+    width:100%;
+    background-image: url('images/Banner_5.png');
+    background-position: center;
+    background-size: cover;
+    background-position: relative;
+}
 .Maps iframe {
     position: absolute;
+    display: block;
+    top:0%;
     width:80%;
     padding: 0Px;
     left: 50%;
@@ -15,22 +26,34 @@
 }
 
 .Maps h1 {
-    display: flex;
+    display: block;
+    position: absolute;
+    left:00%;
+    color: #25274D;
+    bottom:65px;
+    
+    
     text-align: left;
     
     margin:3px;
     width:80%;
     padding:0Px;
+
     
     
         
 }
 .Maps p{
-    display: flex;
+    display: block;
+    color: #25274D;
     text-align: left;
+    position: absolute;
+    font-size: 15px;
+    left:00%;
+    bottom:7px;
     
     margin:3px;
-    width:80%;
+    width:25%;
     padding:0Px;
     
     
@@ -38,34 +61,36 @@
 }
 nav {
     display:contents;
-    margin-right:0;
+    margin-left:0;
     width:100%;
-    display:inline;
-    
+        
 }
 
 
 nav img{
   
     width:100Px;
-    float: right;
+    float: left;
     
 } 
 
 .Email-btn {
-    color: blue;
-    font-display: fallback;
-    font-size: 20px;
-    width: 10%;
-    position: absolute; /* Change to relative for better flow */
-    top: 10px; /* Adjust spacing */
+   
+    text-decoration: none;
+    color:#25274D;
+    border:1px solid #25274D;
+    padding: 10px 20px;
+    font-size: 13px;
+    background:transparent;
+    margin: 10px 10px 10px 10px;
+    position:absolute;
+    bottom: 10px; /* Adjust spacing */
     left: 50%; 
     transform: translate(-50%);
-    margin: 10px auto; /* Center within its container */
-    text-align: center;
-    padding:8px;
-    border: 2px solid blue;
+    
     cursor:pointer;
+    
+     
 }
 
 .Email-btn:hover{
@@ -77,13 +102,14 @@ nav img{
 
 @media (max-width: 700px) {
     .Email-btn {
-        position: static; /* Remove absolute positioning for small screens */
+        position: absolute; /* Remove absolute positioning for small screens */
+        top:0px;
         margin-top: 10px;
-        margin-left: 50px;
+        margin-right: 10px;
         display:block;
-        transform:translate(-50%);
+        
         align-content: center;
-        width: 20%; /* Allow full width on small screens */
+        width: 15%; /* Allow full width on small screens */
         text-align: center; /* Center the text */
         font-size: 10px;
         
@@ -91,7 +117,7 @@ nav img{
     
     nav img {
         width: 80px; /* Adjust size for mobile */
-        float: none; /* Remove float for better alignment */
+        float: left; /* Remove float for better alignment */
         margin: 0 auto; /* Center the image */
         display: block; /* Ensure proper display */
     }
