@@ -21,10 +21,14 @@ nav{
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
+    position:relative;
     
 }
 nav img {
     width:100px;
+    position:absolute;
+left:5px;
+top:0px;
     
 }
 
