@@ -132,7 +132,7 @@ nav img{
     
 }
     nav img {
-        width: 80px; /* Adjust size for mobile */
+        width: 100px; /* Adjust size for mobile */
         float: left; /* Remove float for better alignment */
         margin: 0 auto; /* Center the image */
         display: block; /* Ensure proper display */
