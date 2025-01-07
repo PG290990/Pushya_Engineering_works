@@ -29,9 +29,9 @@ Body {
 .Maps h1 {
     display: block;
     position: absolute;
-    left:00%;
+    left:1%;
     color: #25274D;
-    bottom:65px;
+    top:83%;
     
     
     text-align: left;
@@ -50,8 +50,8 @@ Body {
     text-align: left;
     position: absolute;
     font-size: 15px;
-    left:00%;
-    bottom:7px;
+    left:1%;
+    top:87.5%;
     
     margin:3px;
     width:25%;
