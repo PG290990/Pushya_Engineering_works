@@ -286,7 +286,7 @@
 async function track() {
     const id = document.getElementById("trackingInput").value;
 
-    const response = await fetch(`https://web-production-b9372.up.railway.app/track?tracking_id=${id}`);
+    const response = await fetch(`https://pushya-backend-930401185592.europe-west1.run.app/track?tracking_id=${id}`);
     const data = await response.json();
 
     if (data.status === "NOT_FOUND") {
@@ -304,4 +304,5 @@ async function track() {
 </script>
     
 </body></html>
+
 
