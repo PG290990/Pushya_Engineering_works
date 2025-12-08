@@ -546,3 +546,79 @@ h3{
     color:#f44336;
     
 }
+/* ----- Tracking Status Section (Updated Styling) ----- */
+
+/* ----- Tracking Status Section (Clean Stacked Layout) ----- */
+
+/* TRACKING RESULT BOX */
+#Track_Status .row {
+    display: block !important;       /* override general .row flex */
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Title */
+#Track_Status .result-title {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Each field */
+#Track_Status .result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Column name */
+#Track_Status .label {
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Value */
+#Track_Status .value {
+    color: #e6e6e6;
+}
+
+#Track_Status #result {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Mobile Responsive */
+@media(max-width:700px){
+
+    #Track_Status .row {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #Track_Status .row .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 10px 0;
+    }
+
+    #Track_Status .row .value {
+        margin-top: 3px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    #Track_Status .row .result-title {
+        font-size: 20px;
+    }
+}
+
+
