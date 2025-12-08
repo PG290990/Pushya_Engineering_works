@@ -223,7 +223,7 @@
 <!----------Tracking Status------->
 <section id="Track_Status" class="CTA">
     <h1>Track Your Status</h1>
-            <input id="trackingInput" type="text" placeholder="Enter Tracking ID">
+            <input id="trackingInput" type="text" placeholder="Enter Quotation Number">
 
             <button class="hero-btn2" onclick="track()">Track</button>
 
@@ -294,16 +294,17 @@ async function track() {
     } else {
         const row = data.data;
         document.getElementById("result").innerHTML = `
-            <p><strong>Drawing No:</strong> ${row["Drawing No"]}</p>
+            <p><strong>Drawing No:</strong> ${row["Quotation No "]}</p>
             <p><strong>Customer:</strong> ${row["Customer "]}</p>
-            <p><strong>Status:</strong> ${row["Order Status"]}</p>
-            <p><strong>ETA:</strong> ${row["ETA "]}</p>
+            <p><strong>Status:</strong> ${row["Order Status "]}</p>
+            <p><strong>ETA:</strong> ${row["Estimated Delivery Date "]}</p>
         `;
     }
 }
 </script>
     
 </body></html>
+
 
 
 
