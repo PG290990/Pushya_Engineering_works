@@ -1,7 +1,7 @@
 <html><head>
         <meta name="viewport" content="with=device-width, initial-scale=1.0"> 
 <title>PUSHYA ENGINEERING WORKS -Website </title>
-        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="style copy.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&amp;display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
                        <li><a href="#customer">CUSTOMERS</a></li>
                        <li><a href="#Contact">CONTACT</a></li>
                         <li><a href="#About">ABOUT</a></li>
-                        
+                        <li><a href="#Track_Status">TRACK STATUS</a></li>
                         
                         
                     </ul>
@@ -220,7 +220,16 @@
             <a href="mailto:mkg1234gupta@gmail.com" class="hero-btn2" onclick="sendEmail()">Email Us</a>
         </section>
         
-        
+<!----------Tracking Status------->
+<section id="Track_Status" class="CTA">
+    <h1>Track Your Status</h1>
+            <input id="trackingInput" type="text" placeholder="Enter Tracking ID">
+
+            <button class="hero-btn2" onclick="track()">Track</button>
+
+            <div id="result"></div>
+   
+</section>
         
 <!----------Footer------->
         
@@ -270,6 +279,28 @@
     }
         
         </script>
+
+<!-----------------JAVA SCRIPT FOR Tracking Status-------------------->      
+
+<script>
+async function track() {
+    const id = document.getElementById("trackingInput").value;
+
+    const response = await fetch(`https://web-production-b9372.up.railway.app/track?tracking_id=${id}`);
+    const data = await response.json();
+
+    if (data.status === "NOT_FOUND") {
+        document.getElementById("result").innerHTML = "<p>No record found.</p>";
+    } else {
+        const row = data.data;
+        document.getElementById("result").innerHTML = `
+            <p><strong>Drawing No:</strong> ${row["Drawing No"]}</p>
+            <p><strong>Customer:</strong> ${row["Customer "]}</p>
+            <p><strong>Status:</strong> ${row["Order Status"]}</p>
+            <p><strong>ETA:</strong> ${row["ETA "]}</p>
+        `;
+    }
+}
+</script>
     
 </body></html>
-
