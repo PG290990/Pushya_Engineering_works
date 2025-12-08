@@ -284,26 +284,68 @@
 
 <script>
 async function track() {
-    const id = document.getElementById("trackingInput").value;
+    const id = document.getElementById("trackingInput").value.trim();
+    const resultBox = document.getElementById("result");
 
-    const response = await fetch(`https://track-bvf4uddk.wl.gateway.dev/track?tracking_id=${id}`);
+    // Always hide before showing new content
+    resultBox.style.display = "none";
+    resultBox.style.opacity = "0";
+
+    if (!id) {
+        resultBox.style.display = "block";
+        resultBox.innerHTML = "<p>Please enter a quotation number.</p>";
+        resultBox.style.opacity = "1";
+        return;
+    }
+
+    const response = await fetch(
+        `https://track-bvf4uddk.wl.gateway.dev/track?tracking_id=${id}`
+    );
+
     const data = await response.json();
 
     if (data.status === "NOT_FOUND") {
-        document.getElementById("result").innerHTML = "<p>No record found.</p>";
-    } else {
-        const row = data.data;
-        document.getElementById("result").innerHTML = `
-            <p><strong>Quotation No:</strong> ${row["Quotation No"]}</p>
-            <p><strong>Customer:</strong> ${row["Customer"]}</p>
-            <p><strong>Status:</strong> ${row["Order Status"]}</p>
-            <p><strong>Estimated Delivery Date:</strong> ${row["Estimated Delivery Date"]}</p>
-        `;
+        resultBox.style.display = "block";
+        resultBox.innerHTML = "<p>No record found.</p>";
+        resultBox.style.opacity = "1";
+        return;
     }
+
+    const row = data.data;
+
+    resultBox.innerHTML = `
+        <h1 class="result-title">Status of your Order is as below:</h1>
+
+        <div class="result-item">
+            <span class="label">Quotation No:</span>
+            <span class="value">${row["Quotation No"]}</span>
+        </div>
+
+        <div class="result-item">
+            <span class="label">Customer:</span>
+            <span class="value">${row["Customer"]}</span>
+        </div>
+
+        <div class="result-item">
+            <span class="label">Status:</span>
+            <span class="value">${row["Order Status"]}</span>
+        </div>
+
+        <div class="result-item">
+            <span class="label">Estimated Delivery Date:</span>
+            <span class="value">${row["Estimated Delivery Date"]}</span>
+        </div>
+    `;
+
+    // Now reveal the result smoothly
+    resultBox.style.display = "block";
+    setTimeout(() => resultBox.style.opacity = "1", 10);
 }
+
 </script>
     
 </body></html>
+
 
 
 
